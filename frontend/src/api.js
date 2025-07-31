@@ -17,3 +17,37 @@ export async function register(name, email, password) {
   });
   return res.json();
 }
+
+export async function getUsers(token) {
+  const res = await fetch(`${API_URL}/users`, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  return res.json();
+}
+
+export async function blockUsers(ids, token) {
+  const res = await fetch(`${API_URL}/users/block`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+    body: JSON.stringify({ ids }),
+  });
+  return res.json();
+}
+
+export async function unblockUsers(ids, token) {
+  const res = await fetch(`${API_URL}/users/unblock`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+    body: JSON.stringify({ ids }),
+  });
+  return res.json();
+}
+
+export async function deleteUsers(ids, token) {
+  const res = await fetch(`${API_URL}/users/delete`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
+    body: JSON.stringify({ ids }),
+  });
+  return res.json();
+}

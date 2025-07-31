@@ -11,7 +11,7 @@ function AppRouter() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/" element={<Navigate to="/login" />} />
-        {/* Add a catch-all route for 404s if desired */}
+        
       </Routes>
     </BrowserRouter>
   );

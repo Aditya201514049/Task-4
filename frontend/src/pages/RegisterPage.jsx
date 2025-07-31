@@ -233,16 +233,16 @@ function RegisterPage() {
           opacity: 0.9
         }}></div>
         
-        {/* Decorative Elements */}
-        <div className="position-relative text-center text-white">
-          <div className="mb-4">
-            <i className="bi bi-people" style={{ fontSize: '4rem', opacity: 0.8 }}></i>
-        </div>
-          <h3 className="fw-bold mb-3">Join Our Community!</h3>
-          <p className="mb-0 opacity-75">
-            Create your account and start managing users with our powerful platform
-          </p>
-        </div>
+                 {/* Decorative Elements */}
+         <div className="position-relative text-center text-white px-3">
+           <div className="mb-4">
+             <i className="bi bi-people" style={{ fontSize: '4rem', opacity: 0.8 }}></i>
+           </div>
+           <h3 className="fw-bold mb-3">Join Our Community!</h3>
+           <p className="mb-0 opacity-75">
+             Create your account and start managing users with our powerful platform
+           </p>
+         </div>
 
 
       </div>

@@ -35,10 +35,10 @@ function LoginPage() {
   return (
     <div className="min-vh-100 d-flex auth-page">
              {/* Left Side - Login Form */}
-       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-3 p-lg-4">
-         <div className="w-100" style={{ maxWidth: "400px" }}>
+       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-1 p-lg-2">
+         <div className="w-100" style={{ maxWidth: "360px" }}>
            {/* Brand */}
-           <div className="text-center mb-3">
+           <div className="text-center mb-2">
             <h1 className="display-6 fw-bold text-primary mb-2">
               <i className="bi bi-shield-lock me-2"></i>
               User Management
@@ -48,13 +48,13 @@ function LoginPage() {
 
                      {/* Login Form */}
            <div className="card border-0 shadow-lg auth-card">
-             <div className="card-body p-3 p-lg-4">
-               <h2 className="h4 fw-bold text-dark mb-3">Sign In to Your Account</h2>
+             <div className="card-body p-2 p-lg-3">
+               <h2 className="h6 fw-bold text-dark mb-2">Sign In to Your Account</h2>
               
               <form onSubmit={handleSubmit}>
-                                 {/* Email Field */}
-                 <div className="mb-3">
-                  <label className="form-label fw-semibold text-dark mb-2">
+                                                  {/* Email Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
                     <i className="bi bi-envelope me-2 text-primary"></i>
                     E-mail
                   </label>
@@ -71,9 +71,9 @@ function LoginPage() {
                   </div>
                 </div>
 
-                                 {/* Password Field */}
-                 <div className="mb-3">
-                  <label className="form-label fw-semibold text-dark mb-2">
+                                                  {/* Password Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
                     <i className="bi bi-lock me-2 text-primary"></i>
                     Password
                   </label>
@@ -97,7 +97,7 @@ function LoginPage() {
                 </div>
 
                                  {/* Remember Me */}
-                 <div className="mb-3">
+                 <div className="mb-1">
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="rememberMe" />
                     <label className="form-check-label text-muted" htmlFor="rememberMe">
@@ -108,7 +108,7 @@ function LoginPage() {
 
                                  {/* Error Message */}
                  {error && (
-                   <div className="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+                   <div className="alert alert-danger alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
                     {error}
                     <button 
@@ -121,7 +121,7 @@ function LoginPage() {
 
                                  {/* Submit Button */}
                  <button 
-                   className="btn btn-primary w-100 mb-3"  
+                   className="btn btn-primary w-100 mb-1"  
                   disabled={loading}
                   type="submit"
                 >
@@ -139,25 +139,20 @@ function LoginPage() {
                 </button>
               </form>
 
-              {/* Links */}
-              <div className="d-flex justify-content-between align-items-center">
-                <a href="/register" className="text-decoration-none text-primary fw-semibold">
-                  <i className="bi bi-person-plus me-1"></i>
-                  Don't have an account? Sign up
-                </a>
-                <a href="#" className="text-decoration-none text-primary fw-semibold">
-                  Forgot password?
-                </a>
-              </div>
+                             {/* Links */}
+               <div className="d-flex justify-content-between align-items-center mt-2">
+                 <a href="/register" className="text-decoration-none text-primary fw-semibold">
+                   <i className="bi bi-person-plus me-1"></i>
+                   Don't have an account? Sign up
+                 </a>
+                 <a href="#" className="text-decoration-none text-primary fw-semibold">
+                   Forgot password?
+                 </a>
+               </div>
             </div>
           </div>
 
-                     {/* Footer */}
-           <div className="text-center mt-3">
-            <p className="text-muted small">
-              © 2024 User Management System. All rights reserved.
-            </p>
-          </div>
+                     
         </div>
       </div>
 
@@ -168,16 +163,16 @@ function LoginPage() {
           opacity: 0.9
         }}></div>
         
-        {/* Decorative Elements */}
-        <div className="position-relative text-center text-white">
-          <div className="mb-4">
-            <i className="bi bi-shield-check" style={{ fontSize: '4rem', opacity: 0.8 }}></i>
-          </div>
-          <h3 className="fw-bold mb-3">Welcome Back!</h3>
-          <p className="mb-0 opacity-75">
-            Access your user management dashboard with secure authentication
-          </p>
-        </div>
+                 {/* Decorative Elements */}
+         <div className="position-relative text-center text-white px-3">
+           <div className="mb-4">
+             <i className="bi bi-shield-check" style={{ fontSize: '4rem', opacity: 0.8 }}></i>
+           </div>
+           <h3 className="fw-bold mb-3">Welcome Back!</h3>
+           <p className="mb-0 opacity-75">
+             Access your user management dashboard with secure authentication
+           </p>
+         </div>
 
 
       </div>

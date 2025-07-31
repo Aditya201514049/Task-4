@@ -58,64 +58,90 @@ function HomePage() {
   }
 
   return (
-    <div className="container mt-5">
+    <div className="container py-4">
       {/* Navbar */}
-      <nav className="navbar navbar-light bg-light mb-4">
-        <span className="navbar-brand mb-0 h1">User Management</span>
-        <button className="btn btn-outline-danger" onClick={handleLogout}>
-          Logout
-        </button>
+      <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom mb-4 shadow-sm">
+        <div className="container-fluid">
+          <span className="navbar-brand fw-bold fs-4">User Management</span>
+          <button className="btn btn-outline-danger" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
       </nav>
+
       {/* Toolbar */}
-      <div className="mb-3">
-        <button onClick={() => handleAction("block")} disabled={selected.length === 0}>
-          Block
+      <div className="d-flex align-items-center mb-3 gap-2">
+        <button
+          className="btn btn-warning"
+          onClick={() => handleAction("block")}
+          disabled={selected.length === 0}
+          title="Block selected users"
+        >
+          <i className="bi bi-slash-circle me-1"></i>Block
         </button>
-        <button onClick={() => handleAction("unblock")} disabled={selected.length === 0} style={{marginLeft: 8}}>
-          Unblock
+        <button
+          className="btn btn-success"
+          onClick={() => handleAction("unblock")}
+          disabled={selected.length === 0}
+          title="Unblock selected users"
+        >
+          <i className="bi bi-check-circle me-1"></i>Unblock
         </button>
-        <button onClick={() => handleAction("delete")} disabled={selected.length === 0} style={{marginLeft: 8}}>
-          Delete
+        <button
+          className="btn btn-danger"
+          onClick={() => handleAction("delete")}
+          disabled={selected.length === 0}
+          title="Delete selected users"
+        >
+          <i className="bi bi-trash me-1"></i>Delete
         </button>
       </div>
-      {message && <div>{message}</div>}
+
+      {message && <div className="alert alert-info">{message}</div>}
+
       {/* Table */}
-      <table className="table">
-        <thead>
-          <tr>
-            <th>
-              <input
-                type="checkbox"
-                checked={selectAll}
-                onChange={handleSelectAll}
-                aria-label="Select all"
-              />
-            </th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Last Login</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map(u => (
-            <tr key={u.id}>
-              <td>
+      <div className="table-responsive">
+        <table className="table table-bordered table-hover align-middle bg-white shadow-sm">
+          <thead className="table-light">
+            <tr>
+              <th className="text-center" style={{width: '40px'}}>
                 <input
                   type="checkbox"
-                  checked={selected.includes(u.id)}
-                  onChange={() => handleSelect(u.id)}
-                  aria-label="Select user"
+                  checked={selectAll}
+                  onChange={handleSelectAll}
+                  aria-label="Select all"
                 />
-              </td>
-              <td>{u.name}</td>
-              <td>{u.email}</td>
-              <td>{new Date(u.lastLogin).toLocaleString()}</td>
-              <td>{u.status}</td>
+              </th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Last Login</th>
+              <th>Status</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {users.map(u => (
+              <tr key={u.id}>
+                <td className="text-center">
+                  <input
+                    type="checkbox"
+                    checked={selected.includes(u.id)}
+                    onChange={() => handleSelect(u.id)}
+                    aria-label="Select user"
+                  />
+                </td>
+                <td>{u.name}</td>
+                <td>{u.email}</td>
+                <td>{u.lastLogin ? new Date(u.lastLogin).toLocaleString() : "Never"}</td>
+                <td>
+                  <span className={`badge ${u.status === "active" ? "bg-success" : "bg-secondary"}`}>
+                    {u.status}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }

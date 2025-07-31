@@ -254,16 +254,7 @@ function RegisterPage() {
           </p>
         </div>
 
-        {/* Floating Elements */}
-        <div className="position-absolute top-25 start-25 floating-element">
-          <div className="bg-white rounded-circle opacity-10" style={{ width: '100px', height: '100px' }}></div>
-        </div>
-        <div className="position-absolute bottom-25 end-25 floating-element">
-          <div className="bg-white rounded-circle opacity-10" style={{ width: '60px', height: '60px' }}></div>
-        </div>
-        <div className="position-absolute top-50 start-75 floating-element">
-          <div className="bg-white rounded-circle opacity-10" style={{ width: '40px', height: '40px' }}></div>
-        </div>
+
       </div>
     </div>
   );

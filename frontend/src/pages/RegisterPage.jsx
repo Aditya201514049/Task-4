@@ -51,29 +51,29 @@ function RegisterPage() {
   return (
     <div className="min-vh-100 d-flex auth-page">
              {/* Left Side - Register Form */}
-       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-2 p-lg-3">
-         <div className="w-100" style={{ maxWidth: "380px" }}>
-           {/* Brand */}
+       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-1 p-lg-2">
+         <div className="w-100" style={{ maxWidth: "360px" }}>
+                      {/* Brand */}
            <div className="text-center mb-2">
-            <h1 className="display-6 fw-bold text-primary mb-2">
-              <i className="bi bi-shield-lock me-2"></i>
-              User Management
-            </h1>
-            <p className="text-muted">Join our community</p>
-          </div>
+             <h1 className="h4 fw-bold text-primary mb-1">
+               <i className="bi bi-shield-lock me-2"></i>
+               User Management
+             </h1>
+             <p className="text-muted small">Join our community</p>
+           </div>
 
                      {/* Register Form */}
            <div className="card border-0 shadow-lg auth-card">
              <div className="card-body p-2 p-lg-3">
-               <h2 className="h5 fw-bold text-dark mb-2">Create Your Account</h2>
+               <h2 className="h6 fw-bold text-dark mb-2">Create Your Account</h2>
               
-              <form onSubmit={handleSubmit}>
-                                                  {/* Name Field */}
-                 <div className="mb-2">
-                   <label className="form-label fw-semibold text-dark mb-1">
-                    <i className="bi bi-person me-2 text-primary"></i>
-                    Full Name
-                  </label>
+      <form onSubmit={handleSubmit}>
+                                                                   {/* Name Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
+                     <i className="bi bi-person me-1 text-primary"></i>
+                     Full Name
+                   </label>
                   <div className="position-relative">
                     <input
                       type="text"
@@ -87,12 +87,12 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                                  {/* Email Field */}
-                 <div className="mb-2">
-                   <label className="form-label fw-semibold text-dark mb-1">
-                    <i className="bi bi-envelope me-2 text-primary"></i>
-                    E-mail
-                  </label>
+                                                                   {/* Email Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
+                     <i className="bi bi-envelope me-1 text-primary"></i>
+                     E-mail
+                   </label>
                   <div className="position-relative">
                     <input
                       type="email"
@@ -106,12 +106,12 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                                  {/* Password Field */}
-                 <div className="mb-2">
-                   <label className="form-label fw-semibold text-dark mb-1">
-                    <i className="bi bi-lock me-2 text-primary"></i>
-                    Password
-                  </label>
+                                                                   {/* Password Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
+                     <i className="bi bi-lock me-1 text-primary"></i>
+                     Password
+                   </label>
                   <div className="position-relative">
                     <input
                       type={showPassword ? "text" : "password"}
@@ -131,12 +131,12 @@ function RegisterPage() {
                  </div>
                </div>
 
-                                                  {/* Confirm Password Field */}
-                 <div className="mb-2">
-                   <label className="form-label fw-semibold text-dark mb-1">
-                    <i className="bi bi-lock-fill me-2 text-primary"></i>
-                    Confirm Password
-                  </label>
+                                                                   {/* Confirm Password Field */}
+                 <div className="mb-1">
+                   <label className="form-label fw-semibold text-dark mb-1 small">
+                     <i className="bi bi-lock-fill me-1 text-primary"></i>
+                     Confirm Password
+                   </label>
                   <div className="position-relative">
                     <input
                       type={showConfirmPassword ? "text" : "password"}
@@ -156,19 +156,19 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                 {/* Terms and Conditions */}
-                 <div className="mb-2">
-                  <div className="form-check">
-                    <input className="form-check-input" type="checkbox" id="terms" required />
-                    <label className="form-check-label text-muted" htmlFor="terms">
-                      I agree to the <a href="#" className="text-primary text-decoration-none">Terms of Service</a> and <a href="#" className="text-primary text-decoration-none">Privacy Policy</a>
-                    </label>
-                  </div>
-                </div>
+                                                  {/* Terms and Conditions */}
+                 <div className="mb-1">
+                   <div className="form-check">
+                     <input className="form-check-input" type="checkbox" id="terms" required />
+                     <label className="form-check-label text-muted small" htmlFor="terms">
+                       I agree to the <a href="#" className="text-primary text-decoration-none">Terms of Service</a> and <a href="#" className="text-primary text-decoration-none">Privacy Policy</a>
+                     </label>
+                   </div>
+                 </div>
 
                                  {/* Error Message */}
                  {error && (
-                   <div className="alert alert-danger alert-dismissible fade show mb-2" role="alert">
+                   <div className="alert alert-danger alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
                     {error}
                     <button 
@@ -181,7 +181,7 @@ function RegisterPage() {
 
                                  {/* Success Message */}
                  {success && (
-                   <div className="alert alert-success alert-dismissible fade show mb-2" role="alert">
+                   <div className="alert alert-success alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-check-circle me-2"></i>
                     {success}
                     <button 
@@ -194,7 +194,7 @@ function RegisterPage() {
 
                                  {/* Submit Button */}
                  <button 
-                   className="btn btn-primary w-100 mb-2"  
+                   className="btn btn-primary w-100 mb-1"  
                   disabled={loading}
                   type="submit"
                 >
@@ -222,12 +222,7 @@ function RegisterPage() {
             </div>
           </div>
 
-                     {/* Footer */}
-           <div className="text-center mt-2">
-            <p className="text-muted small">
-              © 2024 User Management System. All rights reserved.
-            </p>
-          </div>
+                     
         </div>
       </div>
 
@@ -242,7 +237,7 @@ function RegisterPage() {
         <div className="position-relative text-center text-white">
           <div className="mb-4">
             <i className="bi bi-people" style={{ fontSize: '4rem', opacity: 0.8 }}></i>
-          </div>
+        </div>
           <h3 className="fw-bold mb-3">Join Our Community!</h3>
           <p className="mb-0 opacity-75">
             Create your account and start managing users with our powerful platform

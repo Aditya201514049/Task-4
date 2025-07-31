@@ -22,7 +22,7 @@ function LoginPage() {
     setLoading(false);
     if (res.token) {
       localStorage.setItem("token", res.token);
-      // Store user information for display
+      
       if (res.user) {
         localStorage.setItem("user", JSON.stringify(res.user));
       }
@@ -34,10 +34,10 @@ function LoginPage() {
 
   return (
     <div className="min-vh-100 d-flex auth-page">
-             {/* Left Side - Login Form */}
+             
        <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-1 p-lg-2">
          <div className="w-100" style={{ maxWidth: "360px" }}>
-           {/* Brand */}
+           
            <div className="text-center mb-2">
             <h1 className="display-6 fw-bold text-primary mb-2">
               <i className="bi bi-shield-lock me-2"></i>
@@ -46,13 +46,13 @@ function LoginPage() {
             <p className="text-muted">Start your journey</p>
           </div>
 
-                     {/* Login Form */}
+                    
            <div className="card border-0 shadow-lg auth-card">
              <div className="card-body p-2 p-lg-3">
                <h2 className="h6 fw-bold text-dark mb-2">Sign In to Your Account</h2>
               
               <form onSubmit={handleSubmit}>
-                                                  {/* Email Field */}
+                                                  
                  <div className="mb-1">
                    <label className="form-label fw-semibold text-dark mb-1 small">
                     <i className="bi bi-envelope me-2 text-primary"></i>
@@ -71,7 +71,7 @@ function LoginPage() {
                   </div>
                 </div>
 
-                                                  {/* Password Field */}
+                                                
                  <div className="mb-1">
                    <label className="form-label fw-semibold text-dark mb-1 small">
                     <i className="bi bi-lock me-2 text-primary"></i>
@@ -96,7 +96,7 @@ function LoginPage() {
                   </div>
                 </div>
 
-                                 {/* Remember Me */}
+                                 
                  <div className="mb-1">
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="rememberMe" />
@@ -106,7 +106,7 @@ function LoginPage() {
                   </div>
                 </div>
 
-                                 {/* Error Message */}
+                                
                  {error && (
                    <div className="alert alert-danger alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
@@ -119,7 +119,7 @@ function LoginPage() {
                   </div>
                 )}
 
-                                 {/* Submit Button */}
+                               
                  <button 
                    className="btn btn-primary w-100 mb-1"  
                   disabled={loading}
@@ -139,7 +139,7 @@ function LoginPage() {
                 </button>
               </form>
 
-                             {/* Links */}
+                            
                <div className="d-flex justify-content-between align-items-center mt-2">
                  <a href="/register" className="text-decoration-none text-primary fw-semibold">
                    <i className="bi bi-person-plus me-1"></i>
@@ -156,14 +156,14 @@ function LoginPage() {
         </div>
       </div>
 
-      {/* Right Side - Decorative Background */}
+     
       <div className="col-lg-4 col-md-5 d-none d-md-flex align-items-center justify-content-center position-relative overflow-hidden auth-sidebar">
         <div className="position-absolute w-100 h-100" style={{
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           opacity: 0.9
         }}></div>
         
-                 {/* Decorative Elements */}
+                
          <div className="position-relative text-center text-white px-3">
            <div className="mb-4">
              <i className="bi bi-shield-check" style={{ fontSize: '4rem', opacity: 0.8 }}></i>

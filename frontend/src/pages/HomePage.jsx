@@ -80,7 +80,7 @@ function HomePage() {
 
   return (
     <div className="min-vh-100 bg-light">
-      {/* Modern Navbar */}
+      
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div className="container-fluid">
           <span className="navbar-brand fw-bold fs-4">
@@ -130,7 +130,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Action Buttons */}
+        
         <div className="row mb-3">
           <div className="col-12">
             <div className="d-flex gap-2">
@@ -165,7 +165,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Status Message */}
+       
         {message && (
           <div className="row mb-3">
             <div className="col-12">
@@ -182,7 +182,7 @@ function HomePage() {
           </div>
         )}
 
-        {/* Modern User Table */}
+       
         <div className="row">
           <div className="col-12">
             <div className="card shadow-sm border-0">
@@ -279,7 +279,7 @@ function HomePage() {
           </div>
         </div>
 
-        {/* Footer Stats */}
+       
         <div className="row mt-4">
           <div className="col-12">
             <div className="d-flex justify-content-between align-items-center text-muted small">

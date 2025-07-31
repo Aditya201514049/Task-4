@@ -21,7 +21,7 @@ function RegisterPage() {
   async function handleSubmit(e) {
     e.preventDefault();
     
-    // Password validation
+    
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
@@ -34,12 +34,12 @@ function RegisterPage() {
     setLoading(false);
     if (res.message) {
       setSuccess("Registration successful! Redirecting to login...");
-      // Clear form
+      
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
-      // Redirect to login page after 2 seconds
+      
       setTimeout(() => {
         window.location.href = "/login";
       }, 2000);
@@ -50,10 +50,10 @@ function RegisterPage() {
 
   return (
     <div className="min-vh-100 d-flex auth-page">
-             {/* Left Side - Register Form */}
+             
        <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-1 p-lg-2">
          <div className="w-100" style={{ maxWidth: "360px" }}>
-                      {/* Brand */}
+                     
            <div className="text-center mb-2">
              <h1 className="h4 fw-bold text-primary mb-1">
                <i className="bi bi-shield-lock me-2"></i>
@@ -62,7 +62,7 @@ function RegisterPage() {
              <p className="text-muted small">Join our community</p>
            </div>
 
-                     {/* Register Form */}
+                    
            <div className="card border-0 shadow-lg auth-card">
              <div className="card-body p-2 p-lg-3">
                <h2 className="h6 fw-bold text-dark mb-2">Create Your Account</h2>
@@ -87,7 +87,7 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                                                   {/* Email Field */}
+                                                                   
                  <div className="mb-1">
                    <label className="form-label fw-semibold text-dark mb-1 small">
                      <i className="bi bi-envelope me-1 text-primary"></i>
@@ -106,7 +106,7 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                                                   {/* Password Field */}
+                                                                  
                  <div className="mb-1">
                    <label className="form-label fw-semibold text-dark mb-1 small">
                      <i className="bi bi-lock me-1 text-primary"></i>
@@ -131,7 +131,7 @@ function RegisterPage() {
                  </div>
                </div>
 
-                                                                   {/* Confirm Password Field */}
+                                                                   
                  <div className="mb-1">
                    <label className="form-label fw-semibold text-dark mb-1 small">
                      <i className="bi bi-lock-fill me-1 text-primary"></i>
@@ -156,7 +156,7 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                                                  {/* Terms and Conditions */}
+                                                  
                  <div className="mb-1">
                    <div className="form-check">
                      <input className="form-check-input" type="checkbox" id="terms" required />
@@ -166,7 +166,7 @@ function RegisterPage() {
                    </div>
                  </div>
 
-                                 {/* Error Message */}
+                                 
                  {error && (
                    <div className="alert alert-danger alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
@@ -179,7 +179,7 @@ function RegisterPage() {
                   </div>
                 )}
 
-                                 {/* Success Message */}
+                                
                  {success && (
                    <div className="alert alert-success alert-dismissible fade show mb-1" role="alert">
                     <i className="bi bi-check-circle me-2"></i>
@@ -192,7 +192,7 @@ function RegisterPage() {
                   </div>
                 )}
 
-                                 {/* Submit Button */}
+                                
                  <button 
                    className="btn btn-primary w-100 mb-1"  
                   disabled={loading}
@@ -212,7 +212,7 @@ function RegisterPage() {
                 </button>
               </form>
 
-              {/* Links */}
+              
               <div className="text-center">
                 <a href="/login" className="text-decoration-none text-primary fw-semibold">
                   <i className="bi bi-arrow-left me-1"></i>
@@ -226,14 +226,14 @@ function RegisterPage() {
         </div>
       </div>
 
-      {/* Right Side - Decorative Background */}
+     
       <div className="col-lg-4 col-md-5 d-none d-md-flex align-items-center justify-content-center position-relative overflow-hidden auth-sidebar">
         <div className="position-absolute w-100 h-100" style={{
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           opacity: 0.9
         }}></div>
         
-                 {/* Decorative Elements */}
+                
          <div className="position-relative text-center text-white px-3">
            <div className="mb-4">
              <i className="bi bi-people" style={{ fontSize: '4rem', opacity: 0.8 }}></i>

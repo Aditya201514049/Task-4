@@ -50,11 +50,11 @@ function RegisterPage() {
 
   return (
     <div className="min-vh-100 d-flex auth-page">
-      {/* Left Side - Register Form */}
-      <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-4 p-lg-5">
-        <div className="w-100" style={{ maxWidth: "450px" }}>
-          {/* Brand */}
-          <div className="text-center mb-5">
+             {/* Left Side - Register Form */}
+       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-3 p-lg-4">
+         <div className="w-100" style={{ maxWidth: "400px" }}>
+           {/* Brand */}
+           <div className="text-center mb-3">
             <h1 className="display-6 fw-bold text-primary mb-2">
               <i className="bi bi-shield-lock me-2"></i>
               User Management
@@ -62,14 +62,14 @@ function RegisterPage() {
             <p className="text-muted">Join our community</p>
           </div>
 
-          {/* Register Form */}
-          <div className="card border-0 shadow-lg auth-card">
-            <div className="card-body p-4 p-lg-5">
-              <h2 className="h3 fw-bold text-dark mb-4">Create Your Account</h2>
+                     {/* Register Form */}
+           <div className="card border-0 shadow-lg auth-card">
+             <div className="card-body p-3 p-lg-4">
+               <h2 className="h4 fw-bold text-dark mb-3">Create Your Account</h2>
               
               <form onSubmit={handleSubmit}>
-                {/* Name Field */}
-                <div className="mb-4">
+                                 {/* Name Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-person me-2 text-primary"></i>
                     Full Name
@@ -87,8 +87,8 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                {/* Email Field */}
-                <div className="mb-4">
+                                 {/* Email Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-envelope me-2 text-primary"></i>
                     E-mail
@@ -106,8 +106,8 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                {/* Password Field */}
-                <div className="mb-4">
+                                 {/* Password Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-lock me-2 text-primary"></i>
                     Password
@@ -131,8 +131,8 @@ function RegisterPage() {
                  </div>
                </div>
 
-                {/* Confirm Password Field */}
-                <div className="mb-4">
+                                 {/* Confirm Password Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-lock-fill me-2 text-primary"></i>
                     Confirm Password
@@ -156,8 +156,8 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                {/* Terms and Conditions */}
-                <div className="mb-4">
+                                 {/* Terms and Conditions */}
+                 <div className="mb-3">
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="terms" required />
                     <label className="form-check-label text-muted" htmlFor="terms">
@@ -166,9 +166,9 @@ function RegisterPage() {
                   </div>
                 </div>
 
-                {/* Error Message */}
-                {error && (
-                  <div className="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                                 {/* Error Message */}
+                 {error && (
+                   <div className="alert alert-danger alert-dismissible fade show mb-3" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
                     {error}
                     <button 
@@ -179,9 +179,9 @@ function RegisterPage() {
                   </div>
                 )}
 
-                {/* Success Message */}
-                {success && (
-                  <div className="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                                 {/* Success Message */}
+                 {success && (
+                   <div className="alert alert-success alert-dismissible fade show mb-3" role="alert">
                     <i className="bi bi-check-circle me-2"></i>
                     {success}
                     <button 
@@ -192,9 +192,9 @@ function RegisterPage() {
                   </div>
                 )}
 
-                {/* Submit Button */}
-                <button 
-                  className="btn btn-primary btn-lg w-100 mb-4" 
+                                 {/* Submit Button */}
+                 <button 
+                   className="btn btn-primary w-100 mb-3"  
                   disabled={loading}
                   type="submit"
                 >
@@ -222,8 +222,8 @@ function RegisterPage() {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-4">
+                     {/* Footer */}
+           <div className="text-center mt-3">
             <p className="text-muted small">
               © 2024 User Management System. All rights reserved.
             </p>

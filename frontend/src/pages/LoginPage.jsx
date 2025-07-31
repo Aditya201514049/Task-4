@@ -34,11 +34,11 @@ function LoginPage() {
 
   return (
     <div className="min-vh-100 d-flex auth-page">
-      {/* Left Side - Login Form */}
-      <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-4 p-lg-5">
-        <div className="w-100" style={{ maxWidth: "450px" }}>
-          {/* Brand */}
-          <div className="text-center mb-5">
+             {/* Left Side - Login Form */}
+       <div className="col-lg-8 col-md-7 d-flex align-items-center justify-content-center p-3 p-lg-4">
+         <div className="w-100" style={{ maxWidth: "400px" }}>
+           {/* Brand */}
+           <div className="text-center mb-3">
             <h1 className="display-6 fw-bold text-primary mb-2">
               <i className="bi bi-shield-lock me-2"></i>
               User Management
@@ -46,14 +46,14 @@ function LoginPage() {
             <p className="text-muted">Start your journey</p>
           </div>
 
-          {/* Login Form */}
-          <div className="card border-0 shadow-lg auth-card">
-            <div className="card-body p-4 p-lg-5">
-              <h2 className="h3 fw-bold text-dark mb-4">Sign In to Your Account</h2>
+                     {/* Login Form */}
+           <div className="card border-0 shadow-lg auth-card">
+             <div className="card-body p-3 p-lg-4">
+               <h2 className="h4 fw-bold text-dark mb-3">Sign In to Your Account</h2>
               
               <form onSubmit={handleSubmit}>
-                {/* Email Field */}
-                <div className="mb-4">
+                                 {/* Email Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-envelope me-2 text-primary"></i>
                     E-mail
@@ -71,8 +71,8 @@ function LoginPage() {
                   </div>
                 </div>
 
-                {/* Password Field */}
-                <div className="mb-4">
+                                 {/* Password Field */}
+                 <div className="mb-3">
                   <label className="form-label fw-semibold text-dark mb-2">
                     <i className="bi bi-lock me-2 text-primary"></i>
                     Password
@@ -96,8 +96,8 @@ function LoginPage() {
                   </div>
                 </div>
 
-                {/* Remember Me */}
-                <div className="mb-4">
+                                 {/* Remember Me */}
+                 <div className="mb-3">
                   <div className="form-check">
                     <input className="form-check-input" type="checkbox" id="rememberMe" />
                     <label className="form-check-label text-muted" htmlFor="rememberMe">
@@ -106,9 +106,9 @@ function LoginPage() {
                   </div>
                 </div>
 
-                {/* Error Message */}
-                {error && (
-                  <div className="alert alert-danger alert-dismissible fade show mb-4" role="alert">
+                                 {/* Error Message */}
+                 {error && (
+                   <div className="alert alert-danger alert-dismissible fade show mb-3" role="alert">
                     <i className="bi bi-exclamation-triangle me-2"></i>
                     {error}
                     <button 
@@ -119,9 +119,9 @@ function LoginPage() {
                   </div>
                 )}
 
-                {/* Submit Button */}
-                <button 
-                  className="btn btn-primary btn-lg w-100 mb-4" 
+                                 {/* Submit Button */}
+                 <button 
+                   className="btn btn-primary w-100 mb-3"  
                   disabled={loading}
                   type="submit"
                 >
@@ -152,8 +152,8 @@ function LoginPage() {
             </div>
           </div>
 
-          {/* Footer */}
-          <div className="text-center mt-4">
+                     {/* Footer */}
+           <div className="text-center mt-3">
             <p className="text-muted small">
               © 2024 User Management System. All rights reserved.
             </p>

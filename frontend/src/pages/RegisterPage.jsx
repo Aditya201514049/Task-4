@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { register } from "../api";
 
 function RegisterPage() {
@@ -8,6 +8,12 @@ function RegisterPage() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      window.location.href = "/home";
+    }
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();

@@ -52,9 +52,21 @@ function HomePage() {
     setSelectAll(false);
   }
 
+  function handleLogout() {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  }
+
   return (
     <div className="container mt-5">
-      <h2>User Management</h2>
+      {/* Navbar */}
+      <nav className="navbar navbar-light bg-light mb-4">
+        <span className="navbar-brand mb-0 h1">User Management</span>
+        <button className="btn btn-outline-danger" onClick={handleLogout}>
+          Logout
+        </button>
+      </nav>
+      {/* Toolbar */}
       <div className="mb-3">
         <button onClick={() => handleAction("block")} disabled={selected.length === 0}>
           Block
@@ -67,6 +79,7 @@ function HomePage() {
         </button>
       </div>
       {message && <div>{message}</div>}
+      {/* Table */}
       <table className="table">
         <thead>
           <tr>

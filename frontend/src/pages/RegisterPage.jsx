@@ -26,11 +26,6 @@ function RegisterPage() {
       setError("Passwords do not match");
       return;
     }
-    
-    if (password.length < 6) {
-      setError("Password must be at least 6 characters long");
-      return;
-    }
 
     setLoading(true);
     setError("");
@@ -127,14 +122,10 @@ function RegisterPage() {
                       className="btn btn-link position-absolute top-50 end-0 translate-middle-y me-3 text-muted p-0"
                       onClick={() => setShowPassword(!showPassword)}
                     >
-                      <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'}`}></i>
-                    </button>
-                  </div>
-                  <div className="form-text">
-                    <i className="bi bi-info-circle me-1"></i>
-                    Password must be at least 6 characters long
-                  </div>
-                </div>
+                                           <i className={`bi ${showPassword ? 'bi-eye-slash' : 'bi-eye'}`}></i>
+                   </button>
+                 </div>
+               </div>
 
                 {/* Confirm Password Field */}
                 <div className="mb-4">

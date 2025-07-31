@@ -8,6 +8,7 @@ function HomePage() {
   const [message, setMessage] = useState("");
   const [filterText, setFilterText] = useState("");
   const token = localStorage.getItem("token");
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
 
   useEffect(() => {
     if (!token) {
@@ -55,6 +56,7 @@ function HomePage() {
 
   function handleLogout() {
     localStorage.removeItem("token");
+    localStorage.removeItem("user");
     window.location.href = "/login";
   }
 
@@ -88,7 +90,7 @@ function HomePage() {
           <div className="d-flex align-items-center">
             <span className="text-light me-3">
               <i className="bi bi-person-circle me-1"></i>
-              Admin
+              {user.name || "User"}
             </span>
             <button 
               className="btn btn-outline-light btn-sm" 

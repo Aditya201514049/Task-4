@@ -33,12 +33,16 @@ function RegisterPage() {
     const res = await register(name, email, password);
     setLoading(false);
     if (res.message) {
-      setSuccess("Registration successful! You can now log in.");
+      setSuccess("Registration successful! Redirecting to login...");
       // Clear form
       setName("");
       setEmail("");
       setPassword("");
       setConfirmPassword("");
+      // Redirect to login page after 2 seconds
+      setTimeout(() => {
+        window.location.href = "/login";
+      }, 2000);
     } else {
       setError(res.error || "Registration failed");
     }

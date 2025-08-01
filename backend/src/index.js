@@ -6,13 +6,13 @@ const userRoutes = require('./routes/users');
 
 const app = express();
 
-// Configure CORS using environment variables
+
 const corsOptions = {
   origin: [
-    'http://localhost:5173', // Local frontend development
+    'http://localhost:5173',
     'http://localhost:3000',
-    process.env.FRONTEND_URL // Your hosted frontend from .env
-  ].filter(Boolean), // Remove any undefined values
+    process.env.FRONTEND_URL 
+  ].filter(Boolean), 
   credentials: true,
   optionsSuccessStatus: 200
 };

@@ -5,7 +5,19 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 
 const app = express();
-app.use(cors());
+
+// Configure CORS using environment variables
+const corsOptions = {
+  origin: [
+    'http://localhost:5173', // Local frontend development
+    'http://localhost:3000', // Alternative local port
+    process.env.FRONTEND_URL // Your hosted frontend from .env
+  ].filter(Boolean), // Remove any undefined values
+  credentials: true,
+  optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.use('/api', authRoutes);

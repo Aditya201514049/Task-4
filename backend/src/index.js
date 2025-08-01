@@ -11,7 +11,7 @@ const corsOptions = {
   origin: [
     'http://localhost:5173', // Local frontend development
     'http://localhost:3000',
-    'https://task-4-e5ia.onrender.com/',
+    'https://task-4-e5ia.onrender.com',
     process.env.FRONTEND_URL // Your hosted frontend from .env
   ].filter(Boolean), // Remove any undefined values
   credentials: true,
